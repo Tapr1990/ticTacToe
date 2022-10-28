@@ -1,0 +1,14 @@
+<h1>Jogo Do Galo</h1>
+<h2 *ngIf="!winner">Proxima Joagada : {{player}}</h2>
+<h2 *ngIf="winner">Vencedor: {{winner}}</h2>
+<main>
+    <app-square 
+        *ngFor="let square of squares; index as i"
+        (click)="makeMove(i)"
+        [value]="square"
+    ></app-square>
+</main>
+<div id="newGame">
+    <app-score-board [xWinCount]=""></app-score-board>
+    <button type="button" (click)="newGame()">Novo Jogo</button>
+</div>

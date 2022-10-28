@@ -1,0 +1,19 @@
+dl, dt, dd {
+    display: inline;
+}
+
+dt:after{
+    content: ":";
+}
+
+dt {
+    margin-left: 10px;
+}
+dl {
+    margin-left: 10px;
+}
+
+dl dd:nth-child(2) {
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
